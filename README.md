@@ -54,13 +54,15 @@ A fully functional casino slot machine game built with Express.js and EJS templa
 
 ```
 casino-slot-machine/
-├── app.js              # Main Express application
-├── package.json        # Project dependencies
+├── server.js          # Main Express application
+├── package.json       # Project dependencies
 ├── views/
 │   └── index.ejs      # Main game template
 ├── public/
 │   └── js/
-│       └── slot-machine.js  # Game logic JavaScript
+│       └── casino.js  # Game logic JavaScript  
+│   └── css/
+│       └── styles.css
 └── README.md          # This file
 ```
 
