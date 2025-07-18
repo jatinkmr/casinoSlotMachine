@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="casino-container">
+        <h1>
+            <%= title %>
+        </h1>
+
+        <div class="balance">
+            Balance: $<span id="balance">
+                <%= balance %>
+            </span>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel1">🎰</div>
+                <div class="reel" id="reel2">🎰</div>
+                <div class="reel" id="reel3">🎰</div>
+            </div>
+
+            <div class="controls">
+                <div class="bet-controls">
+                    <label for="bet">Bet: $</label>
+                    <input type="number" id="bet" class="bet-input" value="10" min="1" max="1000">
+                    <button id="spinBtn" class="btn btn-spin">SPIN!</button>
+                </div>
+                <div class="bet-buttons"></div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <span>Spinning...</span>
+                </div>
+
+                <div class="result" id="result"></div>
+                <div class="status" id="status"></div>
+            </div>
+        </div>
+
+        <div class="paytable">
+            <h3>Paytable (3 of a kind)</h3>
+            <div class="paytable-grid">
+                <% symbols.forEach(symbol=> { %>
+                    <div class="paytable-item">
+                        <span>
+                            <%= symbol.symbol %>
+                                <%= symbol.symbol %>
+                                    <%= symbol.symbol %>
+                        </span>
+                        <span>
+                            <%= symbol.payout %>x
+                        </span>
+                    </div>
+                    <% }); %>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.8em; opacity: 0.7;">
+                2 of a kind pays 30% of the 3 of a kind payout
+            </p>
+        </div>
+    </div>
+
+    <script src="/js/casino.js"></script>
+</body>
+
+</html>
