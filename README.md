@@ -62,7 +62,7 @@ casino-slot-machine/
 │   └── js/
 │       └── casino.js  # Game logic JavaScript  
 │   └── css/
-│       └── styles.css
+│       └── styles.css # CSS Style
 └── README.md          # This file
 ```
 
